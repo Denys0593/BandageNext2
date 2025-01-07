@@ -14,7 +14,7 @@ export default function LetsTalk() {
       />
       <div className="container">
         <h3 className="talk_subtitle">WE Can't WAIT TO MEET YOU</h3>
-        <h2 className="talk_title">Let’s Talk</h2>
+        <h2 className="talk_title">Let's Talk</h2>
         <button className="talk_btn">Try it free now</button>
       </div>
     </div>
