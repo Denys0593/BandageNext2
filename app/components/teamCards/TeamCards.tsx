@@ -5,15 +5,22 @@ import "./teamCards.scss";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TeamCards({ data }: any) {
   const main = data.slices[1].primary;
-  const body = document.querySelector("body") as HTMLBodyElement;
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    // const body = document.querySelector("body") as HTMLBodyElement;
+    setWidth((width) => document.documentElement.clientWidth);
+  }, []);
 
   const smallImages = main.smallImages.map((image: any) => {
-    if (body.offsetWidth > 480) {
+    if (width > 480) {
       return (
         <PrismicNextImage key={image.image.id} field={image.image} alt="" />
       );
@@ -44,20 +51,20 @@ export default function TeamCards({ data }: any) {
     <div className="teamCards">
       <div className="teamCards_image">
         <PrismicNextImage
-          field={body.offsetWidth > 480 ? main.bigImage : main.mobileImage}
+          field={width > 480 ? main.bigImage : main.mobileImage}
           alt=""
         />
       </div>
       <div
-        className={`${body.offsetWidth > 480 ? "teamCards_wrapper" : "teamCards_mobileWrapper"}`}
+        className={`${width > 480 ? "teamCards_wrapper" : "teamCards_mobileWrapper"}`}
       >
         <div
-          className={`${body.offsetWidth > 480 ? "teamCards_wrapper-up" : "teamCards_mobileWrapper-up"}`}
+          className={`${width > 480 ? "teamCards_wrapper-up" : "teamCards_mobileWrapper-up"}`}
         >
           {smallImages.splice(0, 2)}
         </div>
         <div
-          className={`${body.offsetWidth > 480 ? "teamCards_wrapper-low" : "teamCards_mobileWrapper-low"}`}
+          className={`${width > 480 ? "teamCards_wrapper-low" : "teamCards_mobileWrapper-low"}`}
         >
           {smallImages.splice(0, 2)}
         </div>
