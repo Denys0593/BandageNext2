@@ -1,0 +1,163 @@
+@import "../_mixins.scss";
+
+.pricingMain {
+  padding: 112px 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 1162px;
+  background-color: $light-gray-1;
+  &_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: $dark-background-color;
+  }
+  &_descr {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 462px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $second-text-color;
+  }
+  &_buttons {
+    width: 310px;
+    margin: 0 auto;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &_changer {
+    width: 186px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_monthly,
+  &_yearly {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $dark-background-color;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  &_change {
+    position: relative;
+    width: 45px;
+    height: 25px;
+    border-radius: 16px;
+    background: $light-background-color;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  &_changeCircle {
+    position: absolute;
+    top: 9%;
+    left: 5%;
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+    background: #ebebeb;
+    border: 1px solid #d0d0d0;
+    transition: all 0.3s;
+  }
+  &_save {
+    border: none;
+    border-radius: 37px;
+    padding: 10px 20px;
+    width: 109px;
+    height: 44px;
+    background: $faded-primary-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $primary-color;
+    cursor: pointer;
+    transition: all 0.15s;
+    &:hover {
+      scale: 1.04;
+    }
+    &:active {
+      scale: 0.99;
+      transform: translateY(3%);
+      box-shadow: inset 0 0 2px 1px $primary-color;
+    }
+  }
+  .cardsWrapper {
+    width: 985px;
+    height: 704px;
+    margin: 0 auto;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.circleActive {
+  left: 51%;
+  background: $light-background-color;
+}
+
+.changeBG {
+  background: $primary-color;
+}
+
+@media (max-width: 1280px) {
+  .pricingMain {
+    min-height: 962px;
+    padding: 112px 0 80px 0;
+    .cardsWrapper {
+      width: 100%;
+      height: 620px;
+      gap: 5px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pricingMain {
+    .cardsWrapper {
+      height: unset;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .pricingMain {
+    &_descr {
+      width: unset;
+      max-width: 444px;
+    }
+    .cardsWrapper {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .pricingMain {
+    &_descr {
+      max-width: 262px;
+    }
+    &_buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: unset;
+    }
+    // .cardsWrapper {
+    //   flex-direction: column;
+    //   gap: 15px;
+    // }
+  }
+}

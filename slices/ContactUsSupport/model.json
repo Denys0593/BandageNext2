@@ -1,0 +1,71 @@
+{
+  "id": "contact_us_support",
+  "type": "SharedSlice",
+  "name": "ContactUsSupport",
+  "description": "ContactUsSupport",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "supportCards": {
+          "type": "Group",
+          "config": {
+            "label": "SupportCards",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "emailFirst": {
+                "type": "Text",
+                "config": {
+                  "label": "EmailFirst",
+                  "placeholder": ""
+                }
+              },
+              "emailSecond": {
+                "type": "Text",
+                "config": {
+                  "label": "EmailSecond",
+                  "placeholder": ""
+                }
+              },
+              "button": {
+                "type": "Text",
+                "config": {
+                  "label": "Button",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

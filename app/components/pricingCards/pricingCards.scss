@@ -1,0 +1,244 @@
+@import "../_mixins.scss";
+
+.card {
+  width: 327px;
+  height: 664px;
+  margin-top: 40px;
+  padding: 50px 40px;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  transition: all 0.3s;
+  // &:hover {
+  //   width: 329px;
+  //   height: 704px;
+  //   margin-top: 0;
+  //   padding: 70px 40px;
+  //   background: $dark-background-color;
+  //   .card_title,
+  //   .card_subtitle,
+  //   .card_line {
+  //     color: $light-background-color;
+  //   }
+  //   .card_btn {
+  //     background: $primary-color;
+  //     color: $light-background-color;
+  //     border: none;
+  //   }
+  // }
+  &_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $dark-background-color;
+  }
+  &_subtitle {
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 35px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $second-text-color;
+  }
+  &_priceWrapper {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    margin-top: 35px;
+    span {
+      height: 100%;
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &_priceNumber {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: $primary-color;
+  }
+  &_priceInfo {
+    width: 79px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0em;
+    color: $primary-color;
+    p {
+      font-size: 14px;
+      line-height: 171%;
+      letter-spacing: 0.01em;
+      color: $disabled-element-color;
+    }
+  }
+  &_circlesWrapper {
+    min-height: 236px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_greenCircle,
+  &_greyCircle {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &_line {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.01em;
+    color: $dark-background-color;
+  }
+  &_btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    border-radius: 5px;
+    padding: 15px 40px;
+    width: 246px;
+    height: 52px;
+    background: $dark-background-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $light-background-color;
+    cursor: pointer;
+    transition: all 0.15s;
+    &:hover {
+      background: $primary-color;
+      border: none;
+      scale: 1.04;
+    }
+    &:active {
+      transform: translateY(3%);
+    }
+  }
+}
+
+.hoverCard {
+  width: 329px;
+  height: 704px;
+  margin-top: 0;
+  padding: 70px 40px;
+  background: $dark-background-color;
+}
+
+.hoverChangeColor {
+  color: $light-background-color;
+}
+
+.hoverBtn {
+  background: $primary-color;
+  color: $light-background-color;
+  border: none;
+}
+
+@media (max-width: 1280px) {
+  .card {
+    width: 33%;
+    padding: 25px 10px;
+    height: unset;
+    // &:hover {
+    //   width: 33%;
+    //   height: 95%;
+    //   padding: 25px 10px;
+    // }
+    &_subtitle,
+    &_priceWrapper {
+      margin-top: 15px;
+    }
+    &_circlesWrapper {
+      width: 247px;
+      margin: 0 auto;
+      margin-top: 35px;
+    }
+    &_btn {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    &_priceNumber {
+      font-size: 34px;
+    }
+    &_subtitle,
+    &_priceWrapper {
+      margin-top: 10px;
+    }
+    &_circlesWrapper {
+      width: unset;
+    }
+    &_greenCircle,
+    &_greyCircle {
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    &_btn {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 440px;
+    margin: 0 auto;
+
+    &_priceNumber {
+      font-size: 40px;
+    }
+    &_circlesWrapper {
+      width: 303px;
+    }
+    &_greenCircle,
+    &_greyCircle {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &_line {
+      font-size: 16px;
+    }
+    &_btn {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    &_circlesWrapper {
+      width: 266px;
+    }
+    &_line {
+      font-size: 14px;
+    }
+    &_btn {
+      width: 246px;
+    }
+  }
+}

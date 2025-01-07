@@ -1,0 +1,186 @@
+@import "../../mixins.scss";
+
+.register {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: $primary-color;
+  opacity: 0.3;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.registerModal {
+  padding: 40px 50px;
+  width: 610px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(45deg, #e66465, #9198e5);
+  z-index: 3;
+  border-radius: 20px;
+  transition: all 0.3s;
+  &_close {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    cursor: pointer;
+    &:hover {
+      scale: 1.1;
+      font-weight: 700;
+    }
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $dark-background-color;
+  }
+  &_form {
+    // width: 510px;
+    min-height: 550px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_item {
+    min-height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:nth-child(4) {
+      height: 44px;
+      min-height: unset;
+    }
+  }
+  &_userInfo {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.01em;
+    color: $dark-background-color;
+    span {
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: "Required. Format: dd mm yyyy";
+        position: absolute;
+        display: none;
+        left: 0.7rem;
+        top: -0.9rem;
+        width: 15rem;
+        font-weight: 500;
+        color: $light-background-color;
+      }
+      &:hover {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  &_input {
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    &:focus {
+      outline: none;
+      border: 3px solid #17c507;
+    }
+  }
+  &_boxForWrap {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &_wrap {
+    display: flex;
+    align-items: center;
+    input {
+      margin-left: 5px;
+    }
+    &:nth-child(2) {
+      margin-left: 15px;
+    }
+  }
+  &_birhdayWrap {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_birthdayItem {
+    width: 100px;
+    input {
+      width: 100%;
+      height: 30px;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      padding: 10px 15px;
+      &:focus {
+        outline: none;
+        border: 3px solid #17c507;
+      }
+    }
+    .redBorder {
+      border: 2px solid red;
+      border-radius: 5px;
+    }
+  }
+  &_btn {
+    margin-top: 40px;
+    padding: 15px 40px;
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+    background: $primary-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $light-background-color;
+    cursor: pointer;
+    transition: all 0.15s;
+    &:hover {
+      background: $hover-text-color;
+    }
+    &:active {
+      transform: translateY(3%);
+    }
+  }
+}
+
+.redAlert {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgb(119, 0, 0);
+  text-align: right;
+}
+
+.redBorder {
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+  .registerModal {
+    width: 510px;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .registerModal {
+    display: none;
+  }
+}

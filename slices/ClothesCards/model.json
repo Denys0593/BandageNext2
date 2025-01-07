@@ -1,0 +1,60 @@
+{
+  "id": "clothes_cards",
+  "type": "SharedSlice",
+  "name": "ClothesCards",
+  "description": "ClothesCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bigImage": {
+          "type": "Image",
+          "config": {
+            "label": "BigImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "mobileImage": {
+          "type": "Image",
+          "config": {
+            "label": "MobileImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "smallImages": {
+          "type": "Group",
+          "config": {
+            "label": "SmallImages",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "imageMobile": {
+                "type": "Image",
+                "config": {
+                  "label": "ImageMobile",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

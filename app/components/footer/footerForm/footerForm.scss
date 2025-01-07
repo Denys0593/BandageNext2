@@ -1,0 +1,111 @@
+@import "../../_mixins.scss";
+
+.footerForm {
+  margin-top: 20px;
+  width: 321px;
+  height: 58px;
+  display: flex;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  background: #f9f9f9;
+  &_email {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 0.01em;
+    color: $second-text-color;
+    &:focus {
+      background: $light-background-color;
+    }
+  }
+  &_button {
+    border: 1px solid #e6e6e6;
+    border-radius: 0 5px 5px 0;
+    width: 117px;
+    background: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $light-background-color;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
+    }
+    &:active {
+      scale: 0.98;
+    }
+  }
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 233%;
+    letter-spacing: 0.02em;
+    color: $second-text-color;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footerForm {
+    width: 100%;
+    &_email {
+      width: 65%;
+    }
+    &_button {
+      width: 35%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .footerForm {
+    flex-direction: column;
+    height: unset;
+    min-height: 44px;
+    &_email {
+      padding: 10px;
+      font-size: 12px;
+      width: 100%;
+      height: 40px;
+    }
+    &_button {
+      font-size: 12px;
+      height: 40px;
+      width: 100%;
+      border: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footerForm {
+    flex-direction: row;
+    height: 36px;
+    min-height: unset;
+    margin-top: 12px;
+    width: 235px;
+    &_email {
+      height: unset;
+    }
+    &_button {
+      font-size: 12px;
+      height: unset;
+      width: 100%;
+      width: 117px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footerForm {
+    height: 58px;
+    width: 266px;
+    &_email {
+      width: unset;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "free_component",
+  "type": "SharedSlice",
+  "name": "FreeComponent",
+  "description": "FreeComponent",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "button": {
+          "type": "Text",
+          "config": {
+            "label": "Button",
+            "placeholder": ""
+          }
+        },
+        "socialLogos": {
+          "type": "Group",
+          "config": {
+            "label": "SocialLogos",
+            "repeat": true,
+            "fields": {
+              "socialLogo": {
+                "type": "Image",
+                "config": {
+                  "label": "SocialLogo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "link": {
+                "type": "Text",
+                "config": {
+                  "label": "Link",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

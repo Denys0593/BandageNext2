@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "throughout",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "yesterday",
+				"type": "Text"
+			},
+			"homeLink": {
+				"__TYPE__": "FieldContent",
+				"value": "company",
+				"type": "Text"
+			},
+			"pageLink": {
+				"__TYPE__": "FieldContent",
+				"value": "length",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

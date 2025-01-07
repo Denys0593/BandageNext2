@@ -1,0 +1,74 @@
+{
+  "id": "header",
+  "type": "SharedSlice",
+  "name": "Header",
+  "description": "Header",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "mainLogo": {
+          "type": "Text",
+          "config": {
+            "label": "MainLogo",
+            "placeholder": ""
+          }
+        },
+        "list": {
+          "type": "Group",
+          "config": {
+            "label": "List",
+            "repeat": true,
+            "fields": {
+              "listItem": {
+                "type": "Text",
+                "config": {
+                  "label": "ListItem",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Text",
+                "config": {
+                  "label": "Link",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "buttonLogin": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonLogin",
+            "placeholder": ""
+          }
+        },
+        "buttonMember": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonMember",
+            "placeholder": ""
+          }
+        },
+        "buttonArrow": {
+          "type": "Image",
+          "config": {
+            "label": "ButtonArrow",
+            "constraint": {
+              "width": 12,
+              "height": 10
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

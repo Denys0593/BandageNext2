@@ -1,0 +1,79 @@
+@import "../_mixins.scss";
+
+.teamCards {
+  margin: 0 auto;
+  max-width: 1440px;
+  max-height: 530px;
+  display: flex;
+  gap: 10px;
+  &_image {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_wrapper {
+    width: 730px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-up {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: 49.5%;
+      img {
+        max-width: 49.5%;
+        height: 100%;
+      }
+    }
+    &-low {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: 49.5%;
+      img {
+        max-width: 49.5%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .teamCards {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamCards {
+    &_wrapper {
+      min-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .teamCards {
+    flex-direction: column;
+    max-height: unset;
+    gap: unset;
+    &_mobileWrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      min-height: 300px;
+      &-up,
+      &-low {
+        width: 49.5%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

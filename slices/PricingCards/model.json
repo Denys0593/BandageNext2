@@ -1,0 +1,86 @@
+{
+  "id": "pricing_cards",
+  "type": "SharedSlice",
+  "name": "PricingCards",
+  "description": "PricingCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "card": {
+          "type": "Group",
+          "config": {
+            "label": "Card",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "subtitle": {
+                "type": "Text",
+                "config": {
+                  "label": "Subtitle",
+                  "placeholder": ""
+                }
+              },
+              "price": {
+                "type": "Text",
+                "config": {
+                  "label": "Price",
+                  "placeholder": ""
+                }
+              },
+              "yearlyPrice": {
+                "type": "Text",
+                "config": {
+                  "label": "YearlyPrice",
+                  "placeholder": ""
+                }
+              },
+              "greenCircle": {
+                "type": "Image",
+                "config": {
+                  "label": "GreenCircle",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "greyCircle": {
+                "type": "Image",
+                "config": {
+                  "label": "GreyCircle",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "button": {
+                "type": "Text",
+                "config": {
+                  "label": "Button",
+                  "placeholder": ""
+                }
+              },
+              "uid": {
+                "type": "Text",
+                "config": {
+                  "label": "uid",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

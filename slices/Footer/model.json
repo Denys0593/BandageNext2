@@ -1,0 +1,130 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "logo": {
+          "type": "Text",
+          "config": {
+            "label": "Logo",
+            "placeholder": ""
+          }
+        },
+        "facebook": {
+          "type": "Image",
+          "config": {
+            "label": "Facebook",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "instagram": {
+          "type": "Image",
+          "config": {
+            "label": "Instagram",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "twitter": {
+          "type": "Image",
+          "config": {
+            "label": "Twitter",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "lists": {
+          "type": "Group",
+          "config": {
+            "label": "Lists",
+            "repeat": true,
+            "fields": {
+              "list": {
+                "type": "Text",
+                "config": {
+                  "label": "List",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "companyInfo": {
+          "type": "Group",
+          "config": {
+            "label": "Company Info",
+            "repeat": true,
+            "fields": {
+              "item": {
+                "type": "Text",
+                "config": {
+                  "label": "Item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "legal": {
+          "type": "Group",
+          "config": {
+            "label": "Legal",
+            "repeat": true,
+            "fields": {
+              "item": {
+                "type": "Text",
+                "config": {
+                  "label": "Item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "repeat": true,
+            "fields": {
+              "item": {
+                "type": "Text",
+                "config": {
+                  "label": "Item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "resources": {
+          "type": "Group",
+          "config": {
+            "label": "Resources",
+            "repeat": true,
+            "fields": {
+              "item": {
+                "type": "Text",
+                "config": {
+                  "label": "Item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

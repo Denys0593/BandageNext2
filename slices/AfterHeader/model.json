@@ -1,0 +1,47 @@
+{
+  "id": "pricing_after_header",
+  "type": "SharedSlice",
+  "name": "AfterHeader",
+  "description": "PricingAfterHeader",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "homeLink": {
+          "type": "Text",
+          "config": {
+            "label": "HomeLink",
+            "placeholder": ""
+          }
+        },
+        "pageLink": {
+          "type": "Text",
+          "config": {
+            "label": "PageLink",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

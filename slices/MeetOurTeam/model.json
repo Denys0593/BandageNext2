@@ -1,0 +1,116 @@
+{
+  "id": "meet_our_team",
+  "type": "SharedSlice",
+  "name": "MeetOurTeam",
+  "description": "MeetOurTeam",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "users": {
+          "type": "Group",
+          "config": {
+            "label": "Users",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "profession": {
+                "type": "Text",
+                "config": {
+                  "label": "Profession",
+                  "placeholder": ""
+                }
+              },
+              "facebookLink": {
+                "type": "Text",
+                "config": {
+                  "label": "FacebookLlink",
+                  "placeholder": ""
+                }
+              },
+              "instagramLink": {
+                "type": "Text",
+                "config": {
+                  "label": "InstagramLink",
+                  "placeholder": ""
+                }
+              },
+              "twitterLink": {
+                "type": "Text",
+                "config": {
+                  "label": "TwitterLink",
+                  "placeholder": ""
+                }
+              },
+              "uid": {
+                "type": "Text",
+                "config": {
+                  "label": "Uid",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "facebook": {
+          "type": "Image",
+          "config": {
+            "label": "Facebook",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "instagram": {
+          "type": "Image",
+          "config": {
+            "label": "Instagram",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "twitter": {
+          "type": "Image",
+          "config": {
+            "label": "Twitter",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

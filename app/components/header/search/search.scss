@@ -1,0 +1,43 @@
+.inputAndButton {
+  display: flex;
+  position: absolute;
+  width: 99%;
+  height: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 91px;
+  animation: show 1s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: all 0.4s linear;
+  &_inputSearch {
+    padding: 10px 55px 10px 10px;
+    border: none;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    &:focus {
+      background: rgb(244, 251, 253);
+    }
+  }
+  &_btn {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-42%);
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    &:active {
+      scale: 1.05;
+    }
+  }
+}
+
+.active {
+  height: 52px;
+  opacity: 1;
+  visibility: visible;
+}
