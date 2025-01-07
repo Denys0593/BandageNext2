@@ -17,8 +17,8 @@ export default function Main({ data }: any) {
   const [overflow, setOverflow] = useState<boolean>(false);
 
   useEffect(() => {
-    const body = document.querySelector("body") as HTMLBodyElement;
-    body.style.overflow = overflow ? "hidden" : "";
+    // const body = document.querySelector("body") as HTMLBodyElement;
+    document.documentElement.style.overflow = overflow ? "hidden" : "visible";
   }, [overflow]);
 
   function setChange(state: boolean, setState: Function) {
