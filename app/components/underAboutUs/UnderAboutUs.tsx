@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import "./underAboutUs.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,13 +94,20 @@ export default function UnderAboutUs() {
           </div>
         </div>
         <div className="underAboutUs_bottom">
-          <img
+          <Image
             className="underAboutUs_mainPicture"
-            src="../../../videoCard.png"
+            src={`/videoCard.png`}
             alt="video"
+            width="989"
+            height="540"
           />
           <button className="underAboutUs_playButton">
-            <img src="../../../videoPlayButton.png" alt="playButton" />
+            <Image
+              src={`/videoPlayButton.png`}
+              alt="playButton"
+              width="92"
+              height="92"
+            />
           </button>
         </div>
       </div>

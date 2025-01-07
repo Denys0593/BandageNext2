@@ -2,6 +2,7 @@
 
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import "./search.scss";
+import Image from "next/image";
 
 export default function Search() {
   const [showInput, setShowInput] = useState<boolean>(false);
@@ -13,9 +14,11 @@ export default function Search() {
 
   return (
     <>
-      <img
+      <Image
         src="/icons/headerSearch.svg"
         alt="search"
+        width="24"
+        height="24"
         onClick={() => setShowInput((showInput) => !showInput)}
       />
       <div className={`inputAndButton ${showInput ? "active" : ""}`}>
@@ -28,7 +31,12 @@ export default function Search() {
         />
         {value ? (
           <button className="inputAndButton_btn">
-            <img src="/icons/headerSearch.svg" alt="search" />
+            <Image
+              src="/icons/headerSearch.svg"
+              alt="search"
+              width="24"
+              height="24"
+            />
           </button>
         ) : null}
       </div>

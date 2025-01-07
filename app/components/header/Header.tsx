@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Search from "./search/Search";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import Image from "next/image";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -64,7 +65,12 @@ export default function Header({
           </div>
           <div className="main_mobileWrapper">
             <Search />
-            <img src="/icons/headerCart.svg" alt="cart" />
+            <Image
+              src="/icons/headerCart.svg"
+              alt="cart"
+              width="24"
+              height="23"
+            />
             <div
               onClick={() => setshowMenu(!showMenu)}
               className={`main_hamburger ${showMenu ? "main_hamburger-active" : ""}`}
